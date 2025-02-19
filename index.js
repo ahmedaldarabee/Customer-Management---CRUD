@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 // connect with database
 
 const mongoose = require("mongoose");
-const connectionResult = mongoose.connect("mongodb+srv://darabee:darabee$79@learningdb.tnbll.mongodb.net/customers-data?retryWrites=true&w=majority&appName=LearningDB")
+const connectionResult = // Hidden Database Key to avoid and problems about that!
 
 connectionResult.then(() => {
     console.log("connection successfully with database");
