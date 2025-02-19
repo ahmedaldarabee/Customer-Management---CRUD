@@ -246,9 +246,11 @@
               <label for="inputCountry" class="form-label">Country:</label>
               <select name="country" id="inputCountry" class="form-select">
                 <option selected hidden disabled>Choose here ...</option>
-                <option <%=neededUser.country === 'Jordan'    ? "selected" : null %> >Jordan</option>
-                <option <%=neededUser.country === 'Palestine' ? "selected" : null %> >Palestine</option>
-                <option <%=neededUser.country === 'another'   ? "selected" : null %> >another</option>
+
+                <% const countries = ["Jordan","Palestine","Egypt","Syria","Emarat", "Saudi Arabia","Qatar","Lebanon","Tunisia","Algeria","Morocco","another"] %>
+                <% countries.forEach(country => { %>
+                  <option> <%=country%> </option>
+                <%})%>
               </select>
             </div>
           </div>
