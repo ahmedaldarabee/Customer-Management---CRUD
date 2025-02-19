@@ -5,6 +5,7 @@ const app = express(); // start enable all middleware that we needed by express 
 // for enable and manage the routing operations
 const allRoutes = require('./routes/allRoutes');
 const addCustomer = require('./routes/addCustomer');
+const editCustomer = require('./routes/editCustomer');
 
 // these method for updates to the data
 const methodOverride = require('method-override');
@@ -55,9 +56,10 @@ liveReloadServer.server.once("connection", () => {
 })
 
 app.use(addCustomer);
-app.use(allRoutes)
+app.use(editCustomer);
+app.use(allRoutes);
 
-// this section if you use this directory in each of end-point in this file
+// this section if you use similar paths in each of end-point in this file
 // it will manage all of these operations by express framework!
 
 // node js it build the server where the express that manage all of requests that interact with this server ? 
