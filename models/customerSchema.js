@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema; // Correct way that used to connect with [new Schema]
 
+// NoSQL Schema
 const customerSchema = new Schema({
         firstName:String,
         lastName:String,
